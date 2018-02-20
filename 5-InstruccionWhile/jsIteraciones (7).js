@@ -3,17 +3,23 @@ function Mostrar()
 
 	var contador=0;
 	var acumulador=0;
-	var respuesta= true;
-	var numero=prompt("ingrese numeros")
+	var respuesta= "si", mensaje
+	var mensajeOk="ingrese un numero o cancelar para salir"
+	var mensajeError="Error"
+	mensaje=mensajeOk
 	
-while (respuesta==true)
+while (true)
 {
-	contador++
-	numero=parseInt(numero)
-	acumulador+=numero;
-	respuesta=parseInt(prompt)
+	respuesta= prompt(mensaje);
+	mensaje=mensajeOk
+	if(respuesta == null) break;
+	respuesta=parseInt(respuesta);
+	if(isNaN(respuesta));
+	{mensaje=mensajeError;
+		continue; }
+acumulador+=respuesta;
+contador++;		
 }
-if(isNaN(respuesta))
 
 document.getElementById('suma').value=acumulador;
 document.getElementById('promedio').value=acumulador/contador;
