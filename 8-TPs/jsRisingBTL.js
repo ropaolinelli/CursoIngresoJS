@@ -26,7 +26,7 @@ function ComenzarIngreso ()
  //sexo
     var sexo
     sexo=prompt("Ingrese su sexo")
-     while(sexo != "f" && sexo != "m" || sexo==null)
+     while(sexo != "f" && sexo != "m" && sexo!=null)
     {sexo= prompt("Error. Ingrese su sexo nuevamente")}
     document.getElementById("Sexo").value=sexo
 
