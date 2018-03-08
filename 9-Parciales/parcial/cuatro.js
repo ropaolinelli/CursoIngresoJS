@@ -5,6 +5,8 @@ function Mostrar()
     var cuenta
     numeroUno=prompt("Ingrese un numero")
     numeroDos=prompt("Ingrese otro numero")
+    numeroUno=parseInt(numeroUno)
+    numeroDos=parseInt(numeroDos)
 if(numeroUno == numeroDos)
     {cuenta= numeroUno*numeroDos
     document.write("El resultado es " + cuenta)}
@@ -12,7 +14,7 @@ if(numeroUno > numeroDos)
     {cuenta= numeroUno - numeroDos
     document.write("La resta es " + cuenta)}
 if(numeroUno < numeroDos)
-    {cuenta= numeroUno + numeroDos
+    {cuenta= (numeroUno + numeroDos);
     document.write("La suma es " + cuenta)}
 
 }
