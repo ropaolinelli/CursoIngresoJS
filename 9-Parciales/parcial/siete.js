@@ -1,42 +1,22 @@
 function Mostrar()
 {
-    var ventas;
-    var max;
-    var min;
-    var primera=true;
+    var sexo;
+    var nota;
 
-    for (i=0; i<3; i++)
+    for (i = 0 ; i < 5; i ++)
     {
-        ventas = prompt("Ingrese el importe de ventas: ")
-        ventas = parseInt(ventas)
+    sexo=prompt("Ingrese su sexo");
+    nota=prompt("Ingrese sus notas");
 
-        while (ventas<0)
-        {
-        ventas = prompt("Ingrese el importe de ventas correctamente: ")
-        ventas = parseInt(ventas)
-        }
-
-        if (primera)
-        {
-            primera = false
-            max = ventas
-            min = ventas
-        }
-
-        else
-        {
-            if (ventas > max)
-            {
-                max = ventas
-            }
-
-            else (ventas < min)
-            {
-                min = ventas
-            }
-        }
+        while (sexo != "f" && sexo!= "m" && sexo!=null )
+    {
+      sexo=prompt("Error. ingrese su sexo correctamente")
     }
 
-    alert("El minimo de ventas fue: "+min + " y el maximo de ventas fue: "+max)
-
+        while(nota <0 || nota >= 10 )
+    { 
+        nota=prompt("Error. Ingrese una nota valida")
+    }
+    } 
 }
+
