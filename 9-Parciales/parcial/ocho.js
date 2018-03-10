@@ -14,10 +14,12 @@ function Mostrar()
         temperatura=prompt("Ingrese temperatura")
         temperatura=parseInt(temperatura)
         }
+        nombre=prompt("Ingrese su nombre")
         while (! isNaN(nombre))
         {
             nombre=prompt("Ingrese su nombre")
         }
+
 
 
     }   
