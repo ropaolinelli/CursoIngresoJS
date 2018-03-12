@@ -56,7 +56,7 @@ function Mostrar()
 	promedio=acumulador/contador
 	respuesta=prompt("Ingrese no para salir")
 
-}
+	}
 	alert("a) La cantidad de numeros pares es " + par + 
 	" / b) El promedio de todos los numeros es " + promedio + 
 	" / c) la suma de todos los numeros es " + acumulador + 
