@@ -10,7 +10,7 @@ function Mostrar()
     var notaVarones=0;
     var promedio;
 
-    while(respuesta==true)
+    while(respuesta!= "no")
     {   
         notas=prompt("Ingrese notas del alumno");
         notas=parseInt(notas);
@@ -32,17 +32,17 @@ function Mostrar()
 
         if(notas < min)
         {
-            min= nota;
+            min = notas
         }
 
-        if( sexo == "m" && nota >= 6)
+        if( sexo == "m" && notas >= 6)
         {
             notaVarones++
         }
 
-        respuesta=confirm("Ingrese no para salir")
+        respuesta=prompt("Ingrese no para salir")
     }
 alert(" Promedio de notas totales " + totalNotas/contador)
 alert("La nota mas baja es " + min)
-alert("La cantidad de varones cuya nota esm mayor a 6 es " + notaVarones)
+alert("La cantidad de varones cuya nota es mayor o igual a 6 es " + notaVarones)
 }
