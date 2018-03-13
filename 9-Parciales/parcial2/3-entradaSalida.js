@@ -1,14 +1,17 @@
 //Debemos lograr mostrar un mensaje al presionar el botón  'MOSTRAR'.
 function Mostrar()
 {
-	var largo
-	var ancho
+	var precio
+	var descuento
+	var precioDescuento
 	var cuenta
-	largo=document.getElementById("largo").value
-	ancho=document.getElementById("ancho").value
-	largo=parseInt(largo)
-	ancho=parseInt(ancho)
-	cuenta= (largo*2 + ancho*2) + 6
-	alert("De alambre se necesitan " + cuenta)
+
+	precio=document.getElementById("ancho").value
+	descuento=document.getElementById("largo").value
+
+	cuenta= (precio*descuento/100)
+	precioDescuento= cuenta - precio
+	alert(cuenta)
+
 }
 

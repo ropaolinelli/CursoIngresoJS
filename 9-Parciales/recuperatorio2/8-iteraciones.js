@@ -50,10 +50,11 @@ function Mostrar()
 				max = numero
 			}
 		}
+		promedio=acumulador/contador
 		respuesta=prompt("Ingrese no para salir")
 	}
 alert("La cantidad de numeros pares es " + par)
-alert("El promedio es " + acumulador/contador)
+alert("El promedio es " + promedio)
 alert("La suma de todos los numeros es " + acumulador)
 alert("El numero maximo es " + max + " y el numero minimo es " + min)
 }
