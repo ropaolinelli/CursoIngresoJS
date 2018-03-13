@@ -1,64 +1,96 @@
 //Debemos lograr mostrar un mensaje al presionar el botón  'MOSTRAR'.
 function Mostrar()
 {
-	var nota
-	var sexo
-	var min=0
-	var max=6
+	var letra
+	var numero
+	var respuesta
 	var contador=0
-	var totalNota=0
-	var primera=true
-	var notaVarones=0
+	var par=0
+	var impar=0
+	var cero=0
+	var totalNumero=0
+	var min
+	var max
+	var minLetra
+	var maxLetra
+	var acumulador=0
+	var sumaNeg=0
 
-	for(var i=1;i<=6;i++)
+
+	while(respuesta != "no")
 	{
-		nota=prompt("Ingrese su nota")
-		nota=parseInt(nota)
+		letra=prompt("Ingrese una letra")
+
+		while(!isNaN(letra))
+		{
+			letra=prompt("Error. Ingrese una letra valida")
+		}
+
+		numero=prompt("Ingrese un numero entre -100 y 100")
+		numero=parseInt(numero)
 		contador++
 
-		while(nota < 0 || nota > 10 || isNaN(nota))
+		while(numero  < -100 || numero > 100 || isNaN(numero))
 		{
-			nota=prompt("Error. Ingrese nota valida")
-			nota=parseInt(nota)
+			numero=prompt("Error. Ingrese un numero valido")
 		}
 
-		sexo=prompt("Ingrese su sexo")
-
-		while(sexo != "f" && sexo != "m")
+		if(numero % 2 == 0)
 		{
-			sexo=prompt("Error. Ingrese sexo valido")
+			par++
 		}
 
-		totalNota= nota + totalNota
-
-		if(primera)
+		else
 		{
-			primera=false
-			max=nota
-			min=nota
+			impar++
+		}
+
+		if(numero == 0)
+		{
+			cero++
+		}
+
+		if(contador == 1)
+		{
+			min=numero
+			minLetra=letra
+			max=numero
+			maxLetra=letra
 		}
 		
 		else
 		{
-			if(nota < min)
+			if(numero < min)
 			{
-				min=nota
+				min=numero
+				minLetra=letra
 			}
-
-			if(nota > max)
+			if(numero > max)
 			{
-				max=nota
+				max=numero
+				maxLetra=letra
 			}
 		}
-
-		if(nota >= 6 && sexo == "m")
-		{
-			notaVarones++
+		
+		contador++
+		acumulador= acumulador + numero
+		
+		if(acumulador < 0)
+		{	
+			contador
+			sumaNeg= sumaNeg + numero
 		}
-	
+
+
+
+		respuesta=prompt("Ingrese no para salir")
 	}
-alert("El promedio de las notas es " + totalNota/contador)
-alert("La nota mas baja es " + min)
-alert("La cantidad de varones cuya nota es mayor o igual a 6 es " + notaVarones)
+document.write("La cantidad de numeros pares son " + par + 
+"La cantidad de numeros impares son " + impar +
+"La cantidad de ceros son " + cero +
+"El numero y letra minimos son " + min + minLetra + 
+"El numero y letra maximos son " + max + maxLetra + 
+"La suma de numeros negativos es suma " + sumaNeg)
+
 }
 
