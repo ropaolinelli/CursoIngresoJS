@@ -3,10 +3,8 @@ function Mostrar()
 {
 	var nota
 	var sexo
-	var promedio=0
 	var min=0
 	var max=6
-	var notaVarones
 	var contador=0
 	var totalNota=0
 	var primera=true
@@ -26,7 +24,7 @@ function Mostrar()
 
 		sexo=prompt("Ingrese su sexo")
 
-		while(sexo!= "f" && sexo != "m")
+		while(sexo != "f" && sexo != "m")
 		{
 			sexo=prompt("Error. Ingrese sexo valido")
 		}

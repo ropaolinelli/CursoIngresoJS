@@ -15,6 +15,7 @@ function Mostrar()
 	{
 		numero=prompt("Ingrese numeros positivos")
 		numero=parseInt(numero)
+		contador++
 
 		while( isNaN(numero) || numero < 0 || numero==null)
 		{

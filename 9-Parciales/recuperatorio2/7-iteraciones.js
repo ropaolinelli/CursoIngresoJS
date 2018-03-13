@@ -1,7 +1,66 @@
 //Debemos lograr mostrar un mensaje al presionar el botón  'MOSTRAR'.
 function Mostrar()
 {
-	alert("Funciona 7-iteraciones");
+	var nota
+	var sexo
+	var min=0
+	var max=6
+	var contador=0
+	var totalNota=0
+	var primera=true
+	var notaVarones=0
 	
+	for(var i=1;i<=6;i++)
+	{
+		nota=prompt("Ingrese sus notas")
+		nota=parseInt(nota)
+		contador++
+
+		while(nota < 0 || nota > 10 || isNaN(nota))
+		{
+			nota=prompt("Error.Ingrese nota valida")
+			nota=parseInt(nota)
+		}
+
+		sexo=prompt("Ingrese su sexo")
+
+		while(sexo != "f" && sexo != "m")
+		{
+			sexo=prompt("Error. Ingrese sexo valido")
+		}
+
+		totalNota= nota + totalNota
+
+		if(primera)
+		{
+			primera=false
+			max=nota
+			min=nota
+		}
+
+		else
+		{
+			if(nota < min)
+			{
+				min = nota
+			}
+
+			if(nota > max)
+			{
+				max=nota
+			}
+		}	
+
+		if (sexo == "m" && nota >= 6 )
+		{
+			notaVarones++
+		}
+		
+	}
+
+	alert("El promedio de las notas es " + totalNota/contador)
+	alert("La nota mas baja es " + min)
+	alert("La cantidad de varones cuya nota es mayor o igual a 6 es " + notaVarones)
+
 }
 
